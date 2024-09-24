@@ -14,3 +14,23 @@
 - apt install dkms virtualbox-dkms
 - systemctl stop virtualbox
 - poweroff
+
+## 7 GOAD Instalación de requerimientos para instalar el laboratorio GOAD
+- apt install vagrant
+- apt install pipx 
+- pipx install ansible
+- pipx install ansible-core==2.12.6  
+- cp /root/.local/share/pipx/venvs/ansible/bin/ansible /usr/local/bin/ansible                                                                                                                                                                                    
+- cp /root/.local/share/pipx/venvs/ansible/bin/ansible /usr/local/lib/python3.12/dist-packages/ansible
+- cp /root/.local/share/pipx/venvs/ansible/bin/ansible-galaxy  /usr/bin/ansible-galaxy                                                                                                                  
+- cp /root/.local/share/pipx/venvs/ansible/bin/ansible-galaxy  /usr/local/bin/ansible-galaxy                                                                                                                      
+- cp /root/.local/share/pipx/venvs/ansible/bin/ansible-galaxy  /usr/share/bash-completion/completions/_ansible-galaxy
+- gem install winrm winrm-fs winrm-elevated
+- vagrant plugin install vagrant-vbguest
+- vagrant plugin install vagrant-reload
+- pip install ansible-core==2.12.6 --break-system-packages
+- pip install pywinrm --break-system-packages
+- apt install ansible-core
+- cd /opt/GOAD
+- /root/.local/share/pipx/venvs/ansible/bin/ansible-galaxy install -r ansible/requirements.yml 
+- ./goad.sh -t check -l GOAD -p virtualbox -m local
