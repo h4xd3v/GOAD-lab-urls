@@ -40,9 +40,9 @@ kvm_intel → CPU Intel.
 kvm_amd → CPU AMD
 
 List File KVM
-sudo lsof | grep kvm
+- sudo lsof | grep kvm
 
 Delete
-sudo rmmod -f kvm_intel
-sudo rmmod -f kvm_amd
-sudo rmmod -f kvm
+- sudo rmmod -f kvm_intel
+- sudo rmmod -f kvm_amd
+- sudo rmmod -f kvm
