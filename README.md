@@ -34,3 +34,15 @@
 - cd /opt/GOAD
 - /root/.local/share/pipx/venvs/ansible/bin/ansible-galaxy install -r ansible/requirements.yml 
 - ./goad.sh -t check -l GOAD -p virtualbox -m local
+
+## Troubleshooting
+kvm_intel → CPU Intel.
+kvm_amd → CPU AMD
+
+List File KVM
+sudo lsof | grep kvm
+
+Delete
+sudo rmmod -f kvm_intel
+sudo rmmod -f kvm_amd
+sudo rmmod -f kvm
